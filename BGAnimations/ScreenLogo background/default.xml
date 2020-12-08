@@ -1,0 +1,17 @@
+<ActorFrame><children>
+	<Layer
+		File="../../Graphics/dsa_grad"
+		OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,1;zoomto,SCREEN_WIDTH,SCREEN_HEIGHT;"
+	/>
+
+	<Layer
+		File="../../Graphics/dsa_txt"
+		OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y-60;zoom,0.25;diffusealpha,0;sleep,0.5;linear,0.5;diffusealpha,1;bob;effectperiod,4;effectmagnitude,0,6,0"
+	/>
+
+	<Layer
+		Class="Quad"
+		OnCommand="stretchto,SCREEN_LEFT,SCREEN_TOP,SCREEN_RIGHT,SCREEN_BOTTOM;diffuse,#FFFFFF;diffusealpha,1;sleep,0.1;accelerate,0.5;diffusealpha,0"
+	/>
+
+</children></ActorFrame>

@@ -1,0 +1,10 @@
+<ActorFrame><children>
+	<Layer
+		Class="AutoActor" 
+		File="../_shared underlay arrows"
+	/>
+	<!-- <Layer
+		Class="AutoActor" 
+		File="../ScreenWithMenuElements underlay/fore"
+	/> -->
+</children></ActorFrame>

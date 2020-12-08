@@ -1,0 +1,11 @@
+<ActorFrame><children>
+	<Layer
+		Font="_momcake 48px"
+		Text="Start Normal"
+		InitCommand="horizalign,center;shadowlength,0;diffusealpha,0;sleep,0.2;accelerate,0.6;diffusealpha,1"
+		OnCommand="%function(self) self:shadowlength(4); end"
+		GainFocusCommand="diffuseshift;effectperiod,0.5;effectcolor1,0.5,0.5,1,1;effectcolor2,0.25,0.25,0.5,1;zoom,1.1;decelerate,0.25;zoom,1;"
+		LoseFocusCommand="stoptweening;stopeffect;zoom,0.8;diffuse,#FFFFFF"
+		DisabledCommand="diffuse,0.5,0.5,0.5,1"
+	/>
+</children></ActorFrame>
