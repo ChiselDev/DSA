@@ -8,8 +8,14 @@
 		Text="Doubles"
 		InitCommand="y,80;zoom,1.4;horizalign,center;shadowlength,2;diffusealpha,0;sleep,0.2;accelerate,0.6;diffusealpha,1"
 		OnCommand="%function(self) self:shadowlength(4); end"
-		GainFocusCommand="diffuse,#4695D0;zoom,1.8;decelerate,0.25;zoom,1.6;bounce;effectperiod,0.413793;effectmagnitude,0,0,50"
+		GainFocusCommand="diffuse,#4695D0;zoom,1.8;rotationz,-2;decelerate,0.25;zoom,1.6;rotationz,0;bounce;effectperiod,0.413793;effectmagnitude,0,0,50"
 		LoseFocusCommand="stoptweening;stopeffect;zoom,1.4;diffuse,#898989"
 		DisabledCommand="diffuse,0.5,0.5,0.5,1"
+	/>
+	<Layer
+		File="../glow"
+		InitCommand="y,80;zoomy,0.25;diffusealpha,0;zoomto,SCREEN_WIDTH,SCREEN_HEIGHT;"
+		GainFocusCommand="diffusealpha,1;decelerate,0.5;diffusealpha,0"
+		LoseFocusCommand="stoptweening;stopeffect;diffusealpha,0"
 	/>
 </children> </ActorFrame>

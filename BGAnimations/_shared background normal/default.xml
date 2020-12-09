@@ -1,0 +1,13 @@
+<ActorFrame>
+	<children>
+		<Layer
+			File="../../Graphics/dsa_grad"
+			OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,1;zoomto,SCREEN_WIDTH,SCREEN_HEIGHT;"
+		/>
+		<!-- clear the zbuffer so that screens can draw without having to clear it -->
+		<Layer
+			Type="Quad"
+			OnCommand="clearzbuffer,1;zoom,0"
+		/>		
+	</children>
+</ActorFrame>
