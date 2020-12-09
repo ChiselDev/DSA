@@ -1,0 +1,6 @@
+<ActorFrame><children>
+    <Layer
+        File="outputwindow.png"
+        OnCommand="x,SCREEN_CENTER_X-320;y,SCREEN_CENTER_Y-240;diffusealpha,1;zoom,0.9;"
+    />
+</ActorFrame></children>

@@ -1,9 +1,10 @@
 <ActorFrame><children>
-	<BitampText
-		Text="One Player uses 4 Panels"
-		File="_eurostile normal"
-		InitCommand="zoomtowidth,320;horizalign,left;skewx,-0.21"
-		GainFocusCommand="hidden,0;finishtweening;cropright,1;linear,0.5;cropright,0"
+	<!-- Text="Single player: Where only one player gets to experience the gameplay." -->
+	<BitmapText
+		File="_adam bold 20px"
+		OnCommand = "%function(self) self:settext('Single player: Where only one player gets to experience the gameplay.\nAll the single ladies, I guess.') end"
+		InitCommand="x,80;y,40;horizalign,center;skewx,-0.21"
+		GainFocusCommand="wag;effectperiod,4;effectmagnitude,0,0,2;hidden,0;finishtweening;cropright,1;linear,0.5;cropright,0"
 		LoseFocusCommand="hidden,1"
 		OffCommand="linear,0.3;diffusealpha,0"
 	/>
