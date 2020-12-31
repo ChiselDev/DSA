@@ -399,7 +399,7 @@ end
 function GetModifierNames( num )
 	local mods = {
 		"x1","x1.5","x2","x2.5","x3","x4","x5","x6","x8","c300","c450",
-		"Incoming","Overhead","Space","Hallway","Distant",
+		"ATATIME","Overhead","Space","Hallway","Distant",
 		"Standard","Reverse","Split","Alternate","Cross","Centered",
 		"Accel","Decel","Wave","Expand","Boomerang","Bumpy",
 		"Dizzy","Drift","Mini","Flip","Invert","Tornado","Float","Beat",
