@@ -144,8 +144,7 @@ end
 Set = {
 	Text = function(name, text, pn)
 		if not Rows[name] then return end
-		pn = pn or 1
-		-- print(name, text, pn, Rows[name])
+		pn = GAMESTATE:GetNumPlayersEnabled() == 2 and pn or 1
 		Rows[name].Text[pn]:settext(text)
 	end
 }
@@ -218,7 +217,6 @@ do
 				table.insert(Actors.Text, {}) -- This will be the Bullets, one per option row, and they come before the text.
 			elseif IsType(self,'BitmapText') then -- First index is the row Title, the rest of the items.
 				table.insert(Actors.Text[table.getn(Actors.Text)], self)
-				print(self:GetText())
 			elseif IsType(self,'ActorFrame') and self:GetNumChildren() == 3 then
 				table.insert(Actors.Underline,{Row = table.getn(Actors.Text)})
 				self:propagate(1)
