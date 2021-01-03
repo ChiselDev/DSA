@@ -19,7 +19,7 @@ PlayerOptionsList = {
 		Values = {'X', 'C', 'M'},
 		LayoutType = 'ShowOneInRow',
 		SaveSelections = function(self, list, pn)
-			for i=1,#list do
+			for i=1,table.getn(list) do
 				if list[i] then
 					ActiveMods[pn + 1].SpeedModType = self.Values[i]
 				end
@@ -37,7 +37,6 @@ PlayerOptionsList = {
 		SaveSelections = function(self, list, pn)
 			local mods = ActiveMods[pn + 1]
 			local speedtype = mods.SpeedModType or 'X'
-			print(mods.SpeedMod, self.Pos)
 			local speed = mods.SpeedMod or 100
 			local inc = 5
 			for i = 1, table.getn(list) do
@@ -163,9 +162,11 @@ do
 		Highlight = {},
 		Text = {}
 	}
+	local THEMED_TITLES
 	local index = 0
-	local Screen = SCREENMAN
-	function FrameOn(self)
+	local Screen = function() return SCREENMAN:GetTopScreen() end
+	function FrameOn(self, ThemedTitles)
+		THEMED_TITLES = ThemedTitles
 		self:propagate(1)
 		for i=1,3 do self:queuecommand('Capture') end
 		self:queuecommand('Set')
@@ -217,6 +218,7 @@ do
 				table.insert(Actors.Text, {}) -- This will be the Bullets, one per option row, and they come before the text.
 			elseif IsType(self,'BitmapText') then -- First index is the row Title, the rest of the items.
 				table.insert(Actors.Text[table.getn(Actors.Text)], self)
+				print(self:GetText())
 			elseif IsType(self,'ActorFrame') and self:GetNumChildren() == 3 then
 				table.insert(Actors.Underline,{Row = table.getn(Actors.Text)})
 				self:propagate(1)
